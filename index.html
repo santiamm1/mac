@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Miguel Cordini Agronegocios</title>
+    <!-- Bootswatch Cosmo Theme -->
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="App.css" />
+    </head>
+    <body>
+    <!-- Navigation -->
+    <nav class="navegacion">
+        <img src="/docs/logo.png" alt="Miguel Cordini">
+        <a class="navbar-brand" href="#"></a>
+    </nav>
+    <div class="container">
+        <!-- APPLICATION -->
+        <div id="App" class="row pt-5">
+        <!-- FORM -->
+        <div class="col-md-4">
+            <div class="card">
+            <div class="card-header">
+                <h4>Orden de llenado</h4>
+            </div>
+            <form id="product-form" class="card-body">
+                <div class="form-group">
+                <label for="capacidadDelTanque">Capacidad del tanque</label>
+                <input
+                    type="number"
+                    id="capacidadDelTanque"
+                    step="0.1"
+                    placeholder="Capacidad del tanque (l)"
+                    class="form-control"
+                />
+                </div>
+                <div class="form-group">
+                <label for="tasaDeAplicacion">Tasa de aplicación</label>
+                <input
+                    type="number"
+                    id="tasaDeAplicacion"
+                    step="0.1"
+                    placeholder="Tasa de aplicación (l/ha)"
+                    class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                <label for="superficieATratar">Superficie a tratar</label>
+                <input
+                    type="number"
+                    id="superficieATratar"
+                    step="0.1"
+                    placeholder="Superficie a tratar (ha)"
+                    class="form-control"
+                />
+                </div>
+                <div class="form-group">
+                <label for="name">Nombre comercial del producto</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Nombre comercial del producto"
+                    class="form-control"
+                />
+                </div>
+                <div class="form-group">
+                <label for="dosis">Dosis</label>
+                <input
+                    type="number"
+                    id="dosis"
+                    step="0.01"
+                    placeholder="Dosis"
+                    class="form-control"
+                />
+                </div>
+                <div class="form-group">
+                <label for="formulacion">Formulación:</label>
+                    <select class="form-select" aria-label="Formulación" id="formulacion">
+                    <option value="1">Polvo mojable</option>
+                    <option value="2">Granulo dispersable</option>
+                    <option value="3">Granulo soluble</option>
+                    <option value="4">Liquido floable</option>
+                    <option value="5">Liquido emulsionable</option>
+                    <option value="6">Concentrado emulsionable</option>
+                    <option value="7">Microemulsion</option>
+                    <option value="8">Liquido soluble</option>
+                    <option value="9">Polvo soluble</option>
+                    </select>
+                </div>
+                <input
+                type="submit"
+                value="Agregar productos"
+                class="btn btn-primary btn-block"
+                />
+                </form>
+            </div>
+            </div>
+
+        <!-- PRODUCTS LIST -->
+        <div id="product-list" class="col-md-8"></div>
+        </div>
+        </div>
+
+        <script src="App.js" type="module"></script>
+    </body>
+    </html>
